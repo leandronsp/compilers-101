@@ -29,16 +29,21 @@ $ gcc -no-pie -o hello-inline hello-inline.c
 $ ./hello-inline
 ```
 
-CLANG
+LLVM - CLANG
 ```bash
 $ cd clang
 $ clang -o hello hello.c 
 $ ./hello
 
-# or using LLC
+# or using LLC (AOT)
 $ clang -S -emit-llvm hello.c -o hello.ll
 $ llc hello.ll -o hello.s
 $ clang hello.s -o hello
+$ ./hello
+
+# or using LLI (JIT)
+$ clang -S -emit-llvm hello.c -o hello.ll
+$ lli hello.ll
 $ ./hello
 ```
 
