@@ -1,10 +1,20 @@
 ## Compilers 101
 
-NASM x86
+For a x86_64 architecture.
+
+x86_64
+```bash
+$ cd gnu-as
+$ as -o hello.o hello.s 
+$ ld -o hello hello.o
+$ ./hello
+```
+
+NASM x86_64
 ```bash
 $ cd nasm
-$ nasm -f elf hello.asm
-$ ld -m elf_i386 -o hello hello.o 
+$ nasm -f elf64 hello.asm
+$ ld -o hello hello.o 
 $ ./hello
 ```
 
