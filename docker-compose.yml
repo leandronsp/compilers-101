@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  ubuntu:
+    build: .
+    working_dir: /app
+    volumes:
+      - .:/app
