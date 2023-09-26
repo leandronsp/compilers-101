@@ -44,7 +44,6 @@ $ ./hello
 # or using LLI (JIT)
 $ clang -S -emit-llvm hello.c -o hello.ll
 $ lli hello.ll
-$ ./hello
 ```
 
 Ruby generating LLVM IR
@@ -58,4 +57,7 @@ $ ./hello
 $ llc hello.ll -o hello.s
 $ clang -no-pie hello.s -o hello
 $ ./hello
+
+# or using LLI
+$ lli hello.ll
 ``` 
